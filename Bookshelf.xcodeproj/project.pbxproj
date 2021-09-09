@@ -9,23 +9,23 @@
 /* Begin PBXBuildFile section */
 		FD737A5D26E9878A0095BED0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD737A5C26E9878A0095BED0 /* AppDelegate.swift */; };
 		FD737A5F26E9878A0095BED0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD737A5E26E9878A0095BED0 /* SceneDelegate.swift */; };
-		FD737A6126E9878A0095BED0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD737A6026E9878A0095BED0 /* ViewController.swift */; };
 		FD737A6426E9878A0095BED0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD737A6226E9878A0095BED0 /* Main.storyboard */; };
 		FD737A6726E9878A0095BED0 /* Bookshelf.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FD737A6526E9878A0095BED0 /* Bookshelf.xcdatamodeld */; };
 		FD737A6926E9878C0095BED0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD737A6826E9878C0095BED0 /* Assets.xcassets */; };
 		FD737A6C26E9878C0095BED0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD737A6A26E9878C0095BED0 /* LaunchScreen.storyboard */; };
+		FD737A7926E98BF60095BED0 /* ListBooksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD737A7826E98BF60095BED0 /* ListBooksTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FD737A5926E9878A0095BED0 /* Bookshelf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bookshelf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD737A5C26E9878A0095BED0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD737A5E26E9878A0095BED0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FD737A6026E9878A0095BED0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FD737A6326E9878A0095BED0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FD737A6626E9878A0095BED0 /* Bookshelf.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bookshelf.xcdatamodel; sourceTree = "<group>"; };
 		FD737A6826E9878C0095BED0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD737A6B26E9878C0095BED0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD737A6D26E9878C0095BED0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD737A7826E98BF60095BED0 /* ListBooksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBooksTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +58,48 @@
 		FD737A5B26E9878A0095BED0 /* Bookshelf */ = {
 			isa = PBXGroup;
 			children = (
-				FD737A5C26E9878A0095BED0 /* AppDelegate.swift */,
-				FD737A5E26E9878A0095BED0 /* SceneDelegate.swift */,
-				FD737A6026E9878A0095BED0 /* ViewController.swift */,
-				FD737A6226E9878A0095BED0 /* Main.storyboard */,
-				FD737A6826E9878C0095BED0 /* Assets.xcassets */,
-				FD737A6A26E9878C0095BED0 /* LaunchScreen.storyboard */,
-				FD737A6D26E9878C0095BED0 /* Info.plist */,
+				FD737A7526E98B4E0095BED0 /* Configuration */,
+				FD737A7626E98B600095BED0 /* Controllers */,
+				FD737A7426E98AE30095BED0 /* Resources */,
 				FD737A6526E9878A0095BED0 /* Bookshelf.xcdatamodeld */,
 			);
 			path = Bookshelf;
+			sourceTree = "<group>";
+		};
+		FD737A7426E98AE30095BED0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FD737A6226E9878A0095BED0 /* Main.storyboard */,
+				FD737A6A26E9878C0095BED0 /* LaunchScreen.storyboard */,
+				FD737A6826E9878C0095BED0 /* Assets.xcassets */,
+				FD737A6D26E9878C0095BED0 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FD737A7526E98B4E0095BED0 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				FD737A5C26E9878A0095BED0 /* AppDelegate.swift */,
+				FD737A5E26E9878A0095BED0 /* SceneDelegate.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		FD737A7626E98B600095BED0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FD737A7726E98BDA0095BED0 /* List Books */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FD737A7726E98BDA0095BED0 /* List Books */ = {
+			isa = PBXGroup;
+			children = (
+				FD737A7826E98BF60095BED0 /* ListBooksTableViewController.swift */,
+			);
+			path = "List Books";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,8 +172,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD737A6126E9878A0095BED0 /* ViewController.swift in Sources */,
 				FD737A5D26E9878A0095BED0 /* AppDelegate.swift in Sources */,
+				FD737A7926E98BF60095BED0 /* ListBooksTableViewController.swift in Sources */,
 				FD737A5F26E9878A0095BED0 /* SceneDelegate.swift in Sources */,
 				FD737A6726E9878A0095BED0 /* Bookshelf.xcdatamodeld in Sources */,
 			);
@@ -291,7 +323,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Bookshelf/Info.plist;
+				INFOPLIST_FILE = Bookshelf/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -299,7 +331,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.romano.Bookshelf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -309,7 +341,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Bookshelf/Info.plist;
+				INFOPLIST_FILE = Bookshelf/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -317,7 +349,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.romano.Bookshelf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
