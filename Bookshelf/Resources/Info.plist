@@ -57,6 +57,8 @@
 	<string>Precisamos acessar a câmera para tirar uma foto do livro.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Precisamos acessar sua biblioteca de fotos para selecionar a foto do livro.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Precisamos acessar sua localização para buscar por livrarias ou bibliotecas.</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

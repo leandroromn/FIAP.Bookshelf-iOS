@@ -347,18 +347,40 @@
         <!--Buscar-->
         <scene sceneID="v0p-RF-emC">
             <objects>
-                <viewController id="KoS-GN-nT1" sceneMemberID="viewController">
+                <viewController id="KoS-GN-nT1" customClass="SearchBookstoresViewController" customModule="Bookshelf" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Ns-6t-d40">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Procure por livrarias ou bibliotecas..." translatesAutoresizingMaskIntoConstraints="NO" id="dZi-tl-kfW">
+                                <rect key="frame" x="0.0" y="140" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="LRA-sp-0Ux">
+                                <rect key="frame" x="0.0" y="191" width="414" height="622"/>
+                            </mapView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="bbN-HV-MAV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dZi-tl-kfW" firstAttribute="leading" secondItem="bbN-HV-MAV" secondAttribute="leading" id="Cfr-gC-Vlx"/>
+                            <constraint firstItem="dZi-tl-kfW" firstAttribute="top" secondItem="bbN-HV-MAV" secondAttribute="top" id="HLh-Lt-WLl"/>
+                            <constraint firstItem="LRA-sp-0Ux" firstAttribute="top" secondItem="dZi-tl-kfW" secondAttribute="bottom" id="Jl5-a9-J14"/>
+                            <constraint firstItem="LRA-sp-0Ux" firstAttribute="leading" secondItem="bbN-HV-MAV" secondAttribute="leading" id="L8Z-mW-j8M"/>
+                            <constraint firstItem="LRA-sp-0Ux" firstAttribute="trailing" secondItem="bbN-HV-MAV" secondAttribute="trailing" id="WSy-xj-D7t"/>
+                            <constraint firstItem="dZi-tl-kfW" firstAttribute="trailing" secondItem="bbN-HV-MAV" secondAttribute="trailing" id="c5G-aw-Y7n"/>
+                            <constraint firstItem="LRA-sp-0Ux" firstAttribute="bottom" secondItem="bbN-HV-MAV" secondAttribute="bottom" id="xSe-PN-bUN"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Buscar" id="B0U-ou-MgR"/>
+                    <connections>
+                        <outlet property="mapView" destination="LRA-sp-0Ux" id="7MV-uf-y9l"/>
+                        <outlet property="searchBar" destination="dZi-tl-kfW" id="tCW-VQ-PwC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Wr-OR-pw9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1357" y="435"/>
+            <point key="canvasLocation" x="1356.521739130435" y="434.59821428571428"/>
         </scene>
         <!--Ajustes-->
         <scene sceneID="DFW-9P-wd8">

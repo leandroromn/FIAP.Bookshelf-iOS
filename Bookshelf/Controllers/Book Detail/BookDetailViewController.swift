@@ -12,7 +12,7 @@ final class BookDetailViewController: UIViewController {
 
     var book: Book?
 
-    // MARK: - View Life Cycle
+    // MARK: - Life Cycle
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -29,11 +29,6 @@ final class BookDetailViewController: UIViewController {
         tabBarController?.tabBar.isHidden = false
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let destination = segue.destination as? AddEditBookViewController else { return }
-        destination.book = book
-    }
-
     // MARK: - Private Methods
 
     private func setupView() {
@@ -45,5 +40,12 @@ final class BookDetailViewController: UIViewController {
             let ratingText = String(format: "%.2f", rating)
             ratingLabel.text = "Nota: \(ratingText)⭐️"
         }
+    }
+
+    // MARK: - Override Methods
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destination = segue.destination as? AddEditBookViewController else { return }
+        destination.book = book
     }
 }

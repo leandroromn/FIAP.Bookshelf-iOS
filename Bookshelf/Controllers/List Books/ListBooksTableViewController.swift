@@ -21,7 +21,7 @@ final class ListBooksTableViewController: UITableViewController {
         return controller
     }()
 
-    // MARK: - View Life Cycle
+    // MARK: - Life Cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +37,8 @@ final class ListBooksTableViewController: UITableViewController {
             print(error.localizedDescription)
         }
     }
+
+    // MARK: - Override Methods
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == detailSegueIdentifier,

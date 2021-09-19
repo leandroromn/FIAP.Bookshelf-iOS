@@ -15,6 +15,7 @@
 		FD737A6926E9878C0095BED0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD737A6826E9878C0095BED0 /* Assets.xcassets */; };
 		FD737A6C26E9878C0095BED0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD737A6A26E9878C0095BED0 /* LaunchScreen.storyboard */; };
 		FD737A7926E98BF60095BED0 /* ListBooksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD737A7826E98BF60095BED0 /* ListBooksTableViewController.swift */; };
+		FD7B754726F6BE09002BBFFC /* SearchBookstoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7B754626F6BE09002BBFFC /* SearchBookstoresViewController.swift */; };
 		FDC3EC4F26EADD2D000734EC /* UIViewController+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3EC4E26EADD2D000734EC /* UIViewController+CoreData.swift */; };
 		FDC3EC5126EAE5AA000734EC /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3EC5026EAE5AA000734EC /* BookTableViewCell.swift */; };
 		FDC3EC5426EAEF2E000734EC /* AddEditBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3EC5326EAEF2E000734EC /* AddEditBookViewController.swift */; };
@@ -31,6 +32,7 @@
 		FD737A6B26E9878C0095BED0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD737A6D26E9878C0095BED0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD737A7826E98BF60095BED0 /* ListBooksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBooksTableViewController.swift; sourceTree = "<group>"; };
+		FD7B754626F6BE09002BBFFC /* SearchBookstoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBookstoresViewController.swift; sourceTree = "<group>"; };
 		FDC3EC4E26EADD2D000734EC /* UIViewController+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+CoreData.swift"; sourceTree = "<group>"; };
 		FDC3EC5026EAE5AA000734EC /* BookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 		FDC3EC5326EAEF2E000734EC /* AddEditBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditBookViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				FD737A7726E98BDA0095BED0 /* List Books */,
 				FDC3EC5226EAEF1C000734EC /* Add Edit Book */,
 				FD4B743526F6318800493166 /* Book Detail */,
+				FD7B754526F6BDF7002BBFFC /* Search Bookstores */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -120,6 +123,14 @@
 				FDC3EC5026EAE5AA000734EC /* BookTableViewCell.swift */,
 			);
 			path = "List Books";
+			sourceTree = "<group>";
+		};
+		FD7B754526F6BDF7002BBFFC /* Search Bookstores */ = {
+			isa = PBXGroup;
+			children = (
+				FD7B754626F6BE09002BBFFC /* SearchBookstoresViewController.swift */,
+			);
+			path = "Search Bookstores";
 			sourceTree = "<group>";
 		};
 		FDC3EC4D26EADD19000734EC /* Extensions */ = {
@@ -212,6 +223,7 @@
 				FDC3EC4F26EADD2D000734EC /* UIViewController+CoreData.swift in Sources */,
 				FD737A7926E98BF60095BED0 /* ListBooksTableViewController.swift in Sources */,
 				FD737A5F26E9878A0095BED0 /* SceneDelegate.swift in Sources */,
+				FD7B754726F6BE09002BBFFC /* SearchBookstoresViewController.swift in Sources */,
 				FDC3EC5126EAE5AA000734EC /* BookTableViewCell.swift in Sources */,
 				FDC3EC5426EAEF2E000734EC /* AddEditBookViewController.swift in Sources */,
 				FD4B743726F6319900493166 /* BookDetailViewController.swift in Sources */,

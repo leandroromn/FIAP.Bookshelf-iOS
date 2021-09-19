@@ -13,7 +13,7 @@ final class AddEditBookViewController: UIViewController {
 
     var book: Book?
 
-    // MARK: - View Life Cycle
+    // MARK: - Life Cycle
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
