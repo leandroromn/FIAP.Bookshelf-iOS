@@ -61,10 +61,9 @@ extension ListBooksTableViewController {
             return UITableViewCell()
         }
 
-        let book = fetchedResultsController.object(at: indexPath)
-        cell.imageBook.image = book.image as? UIImage
-        cell.titleLabel.text = book.title
-        cell.summaryLabel.text = book.summary
+        cell.configureContent(
+            for: fetchedResultsController.object(at: indexPath)
+        )
 
         return cell
     }

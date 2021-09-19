@@ -10,6 +10,11 @@ final class SearchBookstoresViewController: UIViewController {
     // MARK: - Properties
 
     var locationManager = CLLocationManager()
+    let userDefaults = UserDefaults.standard
+    let kSearchPreferencesKey = "PREF_SEARCH"
+    var searchPreferencesValue: Bool {
+        userDefaults.bool(forKey: kSearchPreferencesKey)
+    }
 
     // MARK: - Life Cycle
 
@@ -17,6 +22,11 @@ final class SearchBookstoresViewController: UIViewController {
         super.viewDidLoad()
         setupProperties()
         requestLocationAuthorization()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        loadPreferences()
     }
 
     // MARK: - Private Methods
@@ -32,6 +42,20 @@ final class SearchBookstoresViewController: UIViewController {
     private func requestLocationAuthorization() {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
+    }
+}
+
+// MARK: - Preferences
+
+extension SearchBookstoresViewController: PreferencesProtocol {
+    func loadPreferences() {
+        if searchPreferencesValue {
+            let defaultText = "Livrarias"
+            searchBar.text = defaultText
+            fetchMapRequest(defaultText)
+        } else {
+            searchBar.text = nil
+        }
     }
 }
 

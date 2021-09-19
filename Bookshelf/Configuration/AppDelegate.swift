@@ -3,13 +3,41 @@ import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    let notificationCenter = UNUserNotificationCenter.current()
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        verifyNotificationsAuthorization()
         return true
+    }
+
+    private func verifyNotificationsAuthorization() {
+        notificationCenter.delegate = self
+
+        notificationCenter.getNotificationSettings { [weak self] settings in
+            if settings.authorizationStatus == .notDetermined {
+                self?.requestNotificationsAuthorization()
+            }
+        }
+    }
+
+    private func requestNotificationsAuthorization() {
+        let options: UNAuthorizationOptions = [.alert, .sound]
+        notificationCenter.requestAuthorization(options: options) { success, error in
+            guard let error = error else {
+                print("Notifications authorization request result: \(success)")
+                return
+            }
+            print("Notifications authorization request error: \(error.localizedDescription)")
+        }
     }
 
     // MARK: UISceneSession Lifecycle
 
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
+    func application(
+        _ application: UIApplication,
+        configurationForConnecting connectingSceneSession: UISceneSession,
+        options: UIScene.ConnectionOptions
+    ) -> UISceneConfiguration {
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
     }
 
@@ -39,5 +67,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
+    }
+}
+
+// MARK: - UNUserNotificationCenter delegate
+
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    func userNotificationCenter(
+        _ center: UNUserNotificationCenter,
+        willPresent notification: UNNotification,
+        withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void
+    ) {
+        completionHandler([.banner, .sound])
+    }
+
+    func userNotificationCenter(
+        _ center: UNUserNotificationCenter,
+        didReceive response: UNNotificationResponse,
+        withCompletionHandler completionHandler: @escaping () -> Void
+    ) {
+        completionHandler()
     }
 }

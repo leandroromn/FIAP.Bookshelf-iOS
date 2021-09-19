@@ -16,6 +16,8 @@
 		FD737A6C26E9878C0095BED0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD737A6A26E9878C0095BED0 /* LaunchScreen.storyboard */; };
 		FD737A7926E98BF60095BED0 /* ListBooksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD737A7826E98BF60095BED0 /* ListBooksTableViewController.swift */; };
 		FD7B754726F6BE09002BBFFC /* SearchBookstoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7B754626F6BE09002BBFFC /* SearchBookstoresViewController.swift */; };
+		FD7B754A26F6C3EA002BBFFC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7B754926F6C3EA002BBFFC /* SettingsViewController.swift */; };
+		FD7B754D26F6EF68002BBFFC /* PreferencesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7B754C26F6EF68002BBFFC /* PreferencesProtocol.swift */; };
 		FDC3EC4F26EADD2D000734EC /* UIViewController+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3EC4E26EADD2D000734EC /* UIViewController+CoreData.swift */; };
 		FDC3EC5126EAE5AA000734EC /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3EC5026EAE5AA000734EC /* BookTableViewCell.swift */; };
 		FDC3EC5426EAEF2E000734EC /* AddEditBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3EC5326EAEF2E000734EC /* AddEditBookViewController.swift */; };
@@ -33,6 +35,8 @@
 		FD737A6D26E9878C0095BED0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD737A7826E98BF60095BED0 /* ListBooksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBooksTableViewController.swift; sourceTree = "<group>"; };
 		FD7B754626F6BE09002BBFFC /* SearchBookstoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBookstoresViewController.swift; sourceTree = "<group>"; };
+		FD7B754926F6C3EA002BBFFC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		FD7B754C26F6EF68002BBFFC /* PreferencesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesProtocol.swift; sourceTree = "<group>"; };
 		FDC3EC4E26EADD2D000734EC /* UIViewController+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+CoreData.swift"; sourceTree = "<group>"; };
 		FDC3EC5026EAE5AA000734EC /* BookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 		FDC3EC5326EAEF2E000734EC /* AddEditBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditBookViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				FD737A7526E98B4E0095BED0 /* Configuration */,
+				FD7B754B26F6EF4D002BBFFC /* Protocols */,
 				FD737A7626E98B600095BED0 /* Controllers */,
 				FDC3EC4D26EADD19000734EC /* Extensions */,
 				FD737A7426E98AE30095BED0 /* Resources */,
@@ -112,6 +117,7 @@
 				FDC3EC5226EAEF1C000734EC /* Add Edit Book */,
 				FD4B743526F6318800493166 /* Book Detail */,
 				FD7B754526F6BDF7002BBFFC /* Search Bookstores */,
+				FD7B754826F6C3DE002BBFFC /* Settings */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -131,6 +137,22 @@
 				FD7B754626F6BE09002BBFFC /* SearchBookstoresViewController.swift */,
 			);
 			path = "Search Bookstores";
+			sourceTree = "<group>";
+		};
+		FD7B754826F6C3DE002BBFFC /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				FD7B754926F6C3EA002BBFFC /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		FD7B754B26F6EF4D002BBFFC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FD7B754C26F6EF68002BBFFC /* PreferencesProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		FDC3EC4D26EADD19000734EC /* Extensions */ = {
@@ -219,9 +241,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD7B754D26F6EF68002BBFFC /* PreferencesProtocol.swift in Sources */,
 				FD737A5D26E9878A0095BED0 /* AppDelegate.swift in Sources */,
 				FDC3EC4F26EADD2D000734EC /* UIViewController+CoreData.swift in Sources */,
 				FD737A7926E98BF60095BED0 /* ListBooksTableViewController.swift in Sources */,
+				FD7B754A26F6C3EA002BBFFC /* SettingsViewController.swift in Sources */,
 				FD737A5F26E9878A0095BED0 /* SceneDelegate.swift in Sources */,
 				FD7B754726F6BE09002BBFFC /* SearchBookstoresViewController.swift in Sources */,
 				FDC3EC5126EAE5AA000734EC /* BookTableViewCell.swift in Sources */,
