@@ -53,6 +53,10 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>Precisamos acessar a câmera para tirar uma foto do livro.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Precisamos acessar sua biblioteca de fotos para selecionar a foto do livro.</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
