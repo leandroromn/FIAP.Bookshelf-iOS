@@ -26,6 +26,7 @@ final class ListBooksTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadBooks()
+        checkEmptyState()
     }
 
     // MARK: - Private Methods
@@ -35,6 +36,20 @@ final class ListBooksTableViewController: UITableViewController {
             try fetchedResultsController.performFetch()
         } catch {
             print(error.localizedDescription)
+        }
+    }
+
+    private func checkEmptyState() {
+        guard let objects = fetchedResultsController.fetchedObjects else { return }
+        if objects.isEmpty {
+            let emptyTextLabel = UILabel()
+            emptyTextLabel.text = "Cadastre seu primeiro livro! 📚☕️"
+            emptyTextLabel.textAlignment = .center
+            emptyTextLabel.font = .systemFont(ofSize: 14, weight: .semibold)
+            emptyTextLabel.textColor = .secondaryLabel
+            tableView.backgroundView = emptyTextLabel
+        } else {
+            tableView.backgroundView = nil
         }
     }
 
@@ -91,5 +106,6 @@ extension ListBooksTableViewController {
 extension ListBooksTableViewController: NSFetchedResultsControllerDelegate {
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.reloadData()
+        checkEmptyState()
     }
 }

@@ -11,9 +11,8 @@ final class SearchBookstoresViewController: UIViewController {
 
     var locationManager = CLLocationManager()
     let userDefaults = UserDefaults.standard
-    let kSearchPreferencesKey = "PREF_SEARCH"
     var searchPreferencesValue: Bool {
-        userDefaults.bool(forKey: kSearchPreferencesKey)
+        userDefaults.bool(forKey: Settings.searchPreferences.key)
     }
 
     // MARK: - Life Cycle
@@ -55,6 +54,7 @@ extension SearchBookstoresViewController: PreferencesProtocol {
             fetchMapRequest(defaultText)
         } else {
             searchBar.text = nil
+            mapView.removeAnnotations(mapView.annotations)
         }
     }
 }

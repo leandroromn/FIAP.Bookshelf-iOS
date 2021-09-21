@@ -10,9 +10,8 @@ final class BookTableViewCell: UITableViewCell {
     // MARK: - Properties
 
     let userDefaults = UserDefaults.standard
-    let kSummaryPreferencesKey = "PREF_SUMMARY_LINES_COUNT"
     var summaryLinesPreferencesValue: Int {
-        Int(userDefaults.double(forKey: kSummaryPreferencesKey))
+        Int(userDefaults.double(forKey: Settings.summaryLines.key))
     }
 
     // MARK: - Methods

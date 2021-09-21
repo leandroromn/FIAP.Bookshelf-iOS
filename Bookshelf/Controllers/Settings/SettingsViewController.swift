@@ -13,9 +13,6 @@ final class SettingsViewController: UITableViewController{
     let userDefaults = UserDefaults.standard
     let notificationCenter = UNUserNotificationCenter.current()
     let notificationIdentifier = "com.romano.Bookshelf.weekly_reminder_notification"
-    let kSummaryPreferencesKey = "PREF_SUMMARY_LINES_COUNT"
-    let kSearchPreferencesKey = "PREF_SEARCH"
-    let kNotificationsPreferencesKey = "PREF_NOTIFICATIONS"
 
     // MARK: - Life Cycle
 
@@ -27,12 +24,12 @@ final class SettingsViewController: UITableViewController{
     // MARK: - Private Methods
 
     private func loadPreferences() {
-        let summaryLinesValue = userDefaults.double(forKey: kSummaryPreferencesKey)
+        let summaryLinesValue = userDefaults.double(forKey: Settings.summaryLines.key)
         summaryLinesStepper.value = summaryLinesValue
         summaryLinesLabel.text = formatLinesText(summaryLinesValue)
 
-        searchPreferencesSwitch.isOn = userDefaults.bool(forKey: kSearchPreferencesKey)
-        notificationsPreferencesSwitch.isOn = userDefaults.bool(forKey: kNotificationsPreferencesKey)
+        searchPreferencesSwitch.isOn = userDefaults.bool(forKey: Settings.searchPreferences.key)
+        notificationsPreferencesSwitch.isOn = userDefaults.bool(forKey: Settings.weeklyNotifications.key)
     }
 
     private func formatLinesText(_ value: Double) -> String {
@@ -64,15 +61,15 @@ final class SettingsViewController: UITableViewController{
 
     @IBAction func changeSummaryLinesCount(_ sender: UIStepper) {
         summaryLinesLabel.text = formatLinesText(sender.value)
-        userDefaults.set(sender.value, forKey: kSummaryPreferencesKey)
+        userDefaults.set(sender.value, forKey: Settings.summaryLines.key)
     }
 
     @IBAction func changeSearchPreferencesValue(_ sender: UISwitch) {
-        userDefaults.setValue(sender.isOn, forKey: kSearchPreferencesKey)
+        userDefaults.setValue(sender.isOn, forKey: Settings.searchPreferences.key)
     }
 
     @IBAction func changeNotificationsPreferencesValue(_ sender: UISwitch) {
-        userDefaults.setValue(sender.isOn, forKey: kNotificationsPreferencesKey)
+        userDefaults.setValue(sender.isOn, forKey: Settings.weeklyNotifications.key)
 
         if sender.isOn {
             scheduleLocalNotification()

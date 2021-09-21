@@ -15,11 +15,17 @@
 	<key>CFBundlePackageType</key>
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Precisamos acessar a câmera para tirar uma foto do livro.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Precisamos acessar sua localização para buscar por livrarias ou bibliotecas.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Precisamos acessar sua biblioteca de fotos para selecionar a foto do livro.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -53,12 +59,6 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
-	<key>NSCameraUsageDescription</key>
-	<string>Precisamos acessar a câmera para tirar uma foto do livro.</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Precisamos acessar sua biblioteca de fotos para selecionar a foto do livro.</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Precisamos acessar sua localização para buscar por livrarias ou bibliotecas.</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

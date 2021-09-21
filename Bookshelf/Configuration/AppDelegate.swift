@@ -4,11 +4,18 @@ import CoreData
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     let notificationCenter = UNUserNotificationCenter.current()
+    let userDefaults = UserDefaults.standard
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    func application(
+        _ application: UIApplication,
+        didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+    ) -> Bool {
         verifyNotificationsAuthorization()
+        setupDefaultSettings()
         return true
     }
+
+    // MARK: - Notifications
 
     private func verifyNotificationsAuthorization() {
         notificationCenter.delegate = self
@@ -31,7 +38,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
-    // MARK: UISceneSession Lifecycle
+    // MARK: - Settings
+
+    private func setupDefaultSettings() {
+        if userDefaults.double(forKey: Settings.summaryLines.key) < 2 {
+            userDefaults.setValue(2.0, forKey: Settings.summaryLines.key)
+        }
+    }
+
+    // MARK: - UISceneSession Lifecycle
 
     func application(
         _ application: UIApplication,
