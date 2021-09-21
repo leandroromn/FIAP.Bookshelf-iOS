@@ -22,7 +22,7 @@ final class AboutViewController: UIViewController {
     private func getAppVersion() {
         let version = Bundle.main.versionNumber
         let bundle = Bundle.main.bundleNumber
-        versionLabel.text = "\(version) (\(bundle))"
+        versionLabel.text = "Versão: \(version) (\(bundle))"
     }
 }
 

@@ -16,6 +16,11 @@ final class SettingsViewController: UITableViewController{
 
     // MARK: - Life Cycle
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configureNavigationBar()
+    }
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         loadPreferences()
@@ -30,6 +35,12 @@ final class SettingsViewController: UITableViewController{
 
         searchPreferencesSwitch.isOn = userDefaults.bool(forKey: Settings.searchPreferences.key)
         notificationsPreferencesSwitch.isOn = userDefaults.bool(forKey: Settings.weeklyNotifications.key)
+    }
+
+    private func configureNavigationBar() {
+        navigationController?.navigationBar.largeTitleTextAttributes = [
+            .foregroundColor: UIColor.accentColor
+        ]
     }
 
     private func formatLinesText(_ value: Double) -> String {

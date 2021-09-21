@@ -27,6 +27,7 @@ final class ListBooksTableViewController: UITableViewController {
         super.viewDidLoad()
         loadBooks()
         checkEmptyState()
+        configureNavigationBar()
     }
 
     // MARK: - Private Methods
@@ -51,6 +52,12 @@ final class ListBooksTableViewController: UITableViewController {
         } else {
             tableView.backgroundView = nil
         }
+    }
+
+    private func configureNavigationBar() {
+        navigationController?.navigationBar.largeTitleTextAttributes = [
+            .foregroundColor: UIColor.accentColor
+        ]
     }
 
     // MARK: - Override Methods

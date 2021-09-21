@@ -21,6 +21,7 @@ final class SearchBookstoresViewController: UIViewController {
         super.viewDidLoad()
         setupProperties()
         requestLocationAuthorization()
+        configureNavigationBar()
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -41,6 +42,12 @@ final class SearchBookstoresViewController: UIViewController {
     private func requestLocationAuthorization() {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
+    }
+
+    private func configureNavigationBar() {
+        navigationController?.navigationBar.largeTitleTextAttributes = [
+            .foregroundColor: UIColor.accentColor
+        ]
     }
 }
 
@@ -131,7 +138,7 @@ extension SearchBookstoresViewController: MKMapViewDelegate {
         if overlay is MKPolyline {
             let renderer = MKPolylineRenderer(overlay: overlay)
             renderer.lineWidth = 6.0
-            renderer.strokeColor = UIColor(named: "AccentColor")
+            renderer.strokeColor = .accentColor
             return renderer
         } else {
             return MKOverlayRenderer(overlay: overlay)

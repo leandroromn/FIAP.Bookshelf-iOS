@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		FD36D72526F95BB00051F24C /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD36D72426F95BB00051F24C /* AboutViewController.swift */; };
 		FD36D72726F96E740051F24C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD36D72626F96E740051F24C /* Settings.swift */; };
+		FD36D72926F975360051F24C /* UIColor+AccentColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD36D72826F975360051F24C /* UIColor+AccentColor.swift */; };
 		FD4B743726F6319900493166 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4B743626F6319900493166 /* BookDetailViewController.swift */; };
 		FD737A5D26E9878A0095BED0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD737A5C26E9878A0095BED0 /* AppDelegate.swift */; };
 		FD737A5F26E9878A0095BED0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD737A5E26E9878A0095BED0 /* SceneDelegate.swift */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		FD36D72426F95BB00051F24C /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		FD36D72626F96E740051F24C /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		FD36D72826F975360051F24C /* UIColor+AccentColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+AccentColor.swift"; sourceTree = "<group>"; };
 		FD4B743626F6319900493166 /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
 		FD737A5926E9878A0095BED0 /* Bookshelf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bookshelf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD737A5C26E9878A0095BED0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				FDC3EC4E26EADD2D000734EC /* UIViewController+CoreData.swift */,
+				FD36D72826F975360051F24C /* UIColor+AccentColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				FD36D72726F96E740051F24C /* Settings.swift in Sources */,
 				FDC3EC4F26EADD2D000734EC /* UIViewController+CoreData.swift in Sources */,
 				FD737A7926E98BF60095BED0 /* ListBooksTableViewController.swift in Sources */,
+				FD36D72926F975360051F24C /* UIColor+AccentColor.swift in Sources */,
 				FD7B754A26F6C3EA002BBFFC /* SettingsViewController.swift in Sources */,
 				FD737A5F26E9878A0095BED0 /* SceneDelegate.swift in Sources */,
 				FD36D72526F95BB00051F24C /* AboutViewController.swift in Sources */,
